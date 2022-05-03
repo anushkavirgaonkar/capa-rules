@@ -19,5 +19,5 @@ rule:
       - count(offset(0)): 2
       # -> kernel32 -> LDR_DATA_TABLE_ENTRY.DllBase
       - or:
-        - offset/x32: 0x18 = LDR_DATA_TABLE_ENTRY.DllBase
-        - offset/x64: 0x30 = LDR_DATA_TABLE_ENTRY.DllBase
+        - offset: 0x18 = LDR_DATA_TABLE_ENTRY.DllBase
+        - offset: 0x30 = LDR_DATA_TABLE_ENTRY.DllBase

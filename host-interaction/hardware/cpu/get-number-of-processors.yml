@@ -14,5 +14,5 @@ rule:
     - and:
       - match: PEB access
       - or:
-        - number/x32: 0x64
-        - number/x64: 0xB8
+        - number: 0x64
+        - number: 0xB8

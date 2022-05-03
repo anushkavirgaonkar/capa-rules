@@ -19,13 +19,13 @@ rule:
         - description: check raw data is keyboard keydown
         - and:
           - mnemonic: cmp
-          - offset/x32: 0x18 = RAWINPUT->data.Message
+          - offset: 0x18 = RAWINPUT->data.Message
           - number: 0x100 = WM_KEYDOWN
       - basic block:
         - description: check raw data is keyboard
         - and:
           - mnemonic: cmp
-          - offset/x32: 0x0 = RAWINPUT->header.dwType
+          - offset: 0x0 = RAWINPUT->header.dwType
           - number: 0x1 = RIM_TYPEKEYBOARD
       - optional:
-        - offset/x32: 0x16 = RAWINPUT->data.VKey
+        - offset: 0x16 = RAWINPUT->data.VKey

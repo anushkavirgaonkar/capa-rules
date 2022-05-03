@@ -17,16 +17,16 @@ rule:
         # https://github.com/LordNoteworthy/al-khaser/blob/master/al-khaser/AntiDebug/NtGlobalFlag.cpp#L41
         - characteristic: fs access
         - or:
-          - offset/x32: 0x30
+          - offset: 0x30
           - and:
-            - number/x32: 0x30
+            - number: 0x30
             - mnemonic: add
       - and:
         - characteristic: gs access
         - or:
-          - offset/x64: 0x60
+          - offset: 0x60
           - and:
-            - number/x64: 0x60
+            - number: 0x60
             - mnemonic: add
       - and:
         # WoW64 PEB address is fetched via the WoW64 Thread Environment Block (TEB) at FS:[0x18]-0x2000
